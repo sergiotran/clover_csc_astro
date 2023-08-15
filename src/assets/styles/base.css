@@ -1,0 +1,8 @@
+blockquote {
+  @apply relative overflow-visible font-medium italic tracking-wider text-lg;
+}
+
+blockquote::after {
+  content: '';
+  @apply bg-[url('/imgs/icons/quote.png')] absolute w-[32px] h-[26px] bottom-full right-0 bg-contain z-10 bg-no-repeat;
+}

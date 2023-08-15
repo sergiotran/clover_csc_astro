@@ -1,0 +1,52 @@
+---
+const PARTNERS = [
+  {
+    url: "#",
+    src: "/imgs/partner-1.png",
+    alt: "Partner 1",
+  },
+  {
+    url: "#",
+    src: "/imgs/partner-2.png",
+    alt: "Partner 2",
+  },
+  {
+    url: "#",
+    src: "/imgs/partner-3.png",
+    alt: "Partner 3",
+  },
+  {
+    url: "#",
+    src: "/imgs/partner-4.png",
+    alt: "Partner 4",
+  },
+  {
+    url: "#",
+    src: "/imgs/partner-5.png",
+    alt: "Partner 5",
+  },
+];
+---
+
+<section class="relative py-20">
+  <div class="container flex flex-row gap-10">
+    <h2 class="text-2xl font-bold flex-shrink-0" data-aos="fade-up">
+      Đối tác <br /> Clover CSC
+    </h2>
+    <div class="flex flex-row gap-3">
+      {
+        PARTNERS.map((partner, index) => (
+          <div
+            class="basis-1/4 relative transition hover:-translate-y-2 duration-300"
+            data-aos="fade-down"
+            data-aos-delay={index * 200}
+          >
+            <a href={partner.url} target="_blank">
+              <img src={partner.src} alt={partner.alt} />
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

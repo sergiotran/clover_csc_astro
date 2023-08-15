@@ -1,0 +1,27 @@
+---
+import Hero from "./sections/hero.astro";
+import Value from "./sections/value.astro";
+import Quote from "./sections/quote.astro";
+import Service1 from "./sections/service-1.astro";
+import Service2 from "./sections/service-2.astro";
+import Service3 from "./sections/service-3.astro";
+import Service4 from "./sections/service-4.astro";
+import Partners from "./sections/partners.astro";
+import WhyChooseUs from "./sections/why-choose-us.astro";
+---
+
+<section class="relative flex flex-col">
+  <Hero />
+  <Value />
+  <Quote />
+  <!-- Services -->
+  <div class="flex flex-col gap-10">
+    <Service1 />
+    <Service2 />
+    <Service3 />
+    <Service4 />
+  </div>
+  <!-- #END Services -->
+  <Partners />
+  <WhyChooseUs />
+</section>

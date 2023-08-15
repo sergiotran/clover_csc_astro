@@ -1,0 +1,66 @@
+---
+const REASONS = [
+  {
+    imgSrc: "/imgs/reason-1.png",
+    title: "Am hiểu thị trường địa phương",
+    desc: "Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum.",
+  },
+  {
+    imgSrc: "/imgs/reason-2.png",
+    title: "Kinh nghiệm quản trị cấp C-Lever",
+    desc: "Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum.",
+  },
+  {
+    imgSrc: "/imgs/reason-3.png",
+    title: "Kinh nghiệm hoạch định chiến lược",
+    desc: "Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum.",
+  },
+  {
+    imgSrc: "/imgs/reason-4.png",
+    title: "Am hiểu công cụ truyền thông",
+    desc: "Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum.",
+  },
+];
+---
+
+<section
+  class="relative py-10 bg-[url('/imgs/why-choose-us.jpg')] bg-bottom bg-cover"
+>
+  <div class="container flex flex-col gap-20">
+    <div class="flex flex-col justify-center items-center gap-3">
+      <h4
+        class="uppercase font-bold text-white text-2xl"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Tại Sao ?
+      </h4>
+      <h2
+        class="uppercase font-bold text-white text-3xl"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        Nên chọn Clover CSC
+      </h2>
+    </div>
+    <div class="flex flex-row text-white">
+      {
+        REASONS.map((reason, index) => (
+          <div
+            class="basis-1/4 flex flex-col justify-center gap-5 px-5"
+            data-aos="fade-down"
+            data-aos-delay={index * 200}
+          >
+            <img
+              src={reason.imgSrc}
+              alt={reason.title}
+              class="rounded-full w-[70px] h-[70px] object-cover"
+            />
+            <h4 class="text-xl font-bold">{reason.title}</h4>
+            <p>{reason.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
