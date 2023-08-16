@@ -1,26 +1,13 @@
 ---
+import ServiceSection from "../../../commons/components/service-section.astro";
 ---
 
-<section class="relative py-14">
-  <div class="container flex flex-row gap-10 relative z-10">
-    <div class="basis-1/2 relative" data-aos="fade-right">
-      <img src="/imgs/service-3.png" alt="Service 1" />
-    </div>
-    <div class="basis-2/4 relative" data-aos="fade-left">
-      <h2 class="text-3xl leading-relaxed font-bold mb-5">
-        Dịch Vụ<br /> Clover CSC
-      </h2>
-      <h3 class="text-xl font-bold mb-3">Caping Center</h3>
-      <p class="text-slate-600">
-        Cung cấp dịch vụ Camping Center cho đối tượng học viên với hàng loạt các
+<ServiceSection
+  title={`Dịch vụ<br/> Clover CSC`}
+  subTitle="Caping Center"
+  desc={`Cung cấp dịch vụ Camping Center cho đối tượng học viên với hàng loạt các
         hoạt động dã ngoại, giáo dục và giải trí. Điều này không chỉ giúp các
         học viên có một kỳ nghỉ thú vị, trải nghiệm tích cực và bổ ích mà còn
-        giúp phát triển mặt tinh thần, thể chất và kiến thức của học viên.
-      </p>
-    </div>
-  </div>
-  <div
-    class="absolute top-5 bottom-5 right-0 w-[65%] bg-slate-100 bg-[url('/imgs/logo-bg.png')] bg-left bg-no-repeat bg-[length:30%]"
-  >
-  </div>
-</section>
+        giúp phát triển mặt tinh thần, thể chất và kiến thức của học viên.`}
+  imgSrc="/imgs/service-3.png"
+/>

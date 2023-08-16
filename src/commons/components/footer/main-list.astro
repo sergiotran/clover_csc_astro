@@ -1,0 +1,16 @@
+---
+import { MAIN_LINKS } from "../../constants";
+import Widget from "../widget.astro";
+---
+
+<Widget title="Danh mục chính">
+  <ul class="flex flex-col gap-1">
+    {
+      MAIN_LINKS.map((link) => (
+        <li>
+          <a href={link.href}>{link.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Widget>

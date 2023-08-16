@@ -1,9 +1,17 @@
 ---
 import Contact from "./contact.astro";
+import MainList from "./main-list.astro";
+import ServiceList from "./service-list.astro";
+import Link from "./link.astro";
 ---
 
 <footer class="relative bg-white pt-20 pb-10">
-  <div class="container flex flex-row gap-5">
+  <div
+    class="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-3"
+  >
     <Contact />
+    <MainList />
+    <ServiceList />
+    <Link />
   </div>
 </footer>

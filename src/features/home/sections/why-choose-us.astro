@@ -1,26 +1,5 @@
 ---
-const REASONS = [
-  {
-    imgSrc: "/imgs/reason-1.png",
-    title: "Am hiểu thị trường địa phương",
-    desc: "Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum.",
-  },
-  {
-    imgSrc: "/imgs/reason-2.png",
-    title: "Kinh nghiệm quản trị cấp C-Lever",
-    desc: "Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum.",
-  },
-  {
-    imgSrc: "/imgs/reason-3.png",
-    title: "Kinh nghiệm hoạch định chiến lược",
-    desc: "Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum.",
-  },
-  {
-    imgSrc: "/imgs/reason-4.png",
-    title: "Am hiểu công cụ truyền thông",
-    desc: "Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum.",
-  },
-];
+import { REASONS } from "../../../commons/constants";
 ---
 
 <section
@@ -36,18 +15,20 @@ const REASONS = [
         Tại Sao ?
       </h4>
       <h2
-        class="uppercase font-bold text-white text-3xl"
+        class="uppercase font-bold text-white text-3xl text-center"
         data-aos="fade-up"
         data-aos-delay="200"
       >
         Nên chọn Clover CSC
       </h2>
     </div>
-    <div class="flex flex-row text-white">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-0 text-white"
+    >
       {
         REASONS.map((reason, index) => (
           <div
-            class="basis-1/4 flex flex-col justify-center gap-5 px-5"
+            class="flex flex-col justify-center gap-5 lg:px-5 text-center items-center relative"
             data-aos="fade-down"
             data-aos-delay={index * 200}
           >

@@ -1,0 +1,22 @@
+---
+import classNames from "classnames";
+const { class: className, containerClassName } = Astro.props;
+
+const sectionClasses = classNames("relative py-10", !!className && className);
+const containerClasses = classNames(
+  "container",
+  !!containerClassName && containerClassName
+);
+---
+
+<section class={sectionClasses}>
+  {
+    !!containerClassName ? (
+      <div class={containerClasses}>
+        <slot />
+      </div>
+    ) : (
+      <slot />
+    )
+  }
+</section>

@@ -1,0 +1,11 @@
+---
+import classNames from "classnames";
+const { direction = "left" } = Astro.props;
+
+const classes = classNames(
+  "absolute z-0 rounded-md top-5 bottom-5 w-[65%] md:bg-slate-50 before:bg-[url('/imgs/logo-bg.png')] before:absolute before:bg-no-repeat before:bg-contain before:w-[50%] before:h-[80%] before:top-[50%] before:translate-y-[-50%] before:bg-center",
+  direction === "left" ? "before:right-0 left-0" : "before:left-0 right-0"
+);
+---
+
+<div class={classes}></div>

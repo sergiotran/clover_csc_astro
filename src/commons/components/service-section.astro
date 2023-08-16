@@ -1,0 +1,37 @@
+---
+import classNames from "classnames";
+import BackdropBg from "./backdrop-bg.astro";
+import Section from "./section.astro";
+
+const { direction = "ltr", imgSrc, title, subTitle, desc } = Astro.props;
+const classes = classNames(
+  "container flex gap-10 relative z-10 flex-col",
+  direction === "ltr" ? "md:flex-row" : "md:flex-row-reverse"
+);
+const textClasses = classNames(
+  "basis-2/4 relative",
+  direction === "rtl" && "md:text-right"
+);
+---
+
+<Section class="relative py-14">
+  <div class={classes}>
+    <div
+      class="basis-1/2 relative z-10"
+      data-aos={direction === "ltr" ? "fade-right" : "fade-left"}
+    >
+      <img class="rounded-md shadow-lg" src={imgSrc} alt="Service 1" />
+    </div>
+    <div
+      class={textClasses}
+      data-aos={direction === "ltr" ? "fade-left" : "fade-right"}
+    >
+      <h3 class="text-3xl font-bold mb-5" set:html={title} />
+      <h3 class="text-xl font-bold mb-3">{subTitle}</h3>
+      <p class="text-slate-600">
+        {desc}
+      </p>
+    </div>
+  </div>
+  <BackdropBg direction={direction === "ltr" ? "right" : "left"} />
+</Section>

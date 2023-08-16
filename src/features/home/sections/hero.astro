@@ -1,6 +1,14 @@
 ---
+import Section from "../../../commons/components/section.astro";
+import HeroSlider from "../../../commons/components/hero-slider";
 ---
 
-<section class="h-screen relative -mt-24 bg-[url('/imgs/hero-cover.jpg')] bg-top-center bg-cover">
+<Section
+  class="h-screen relative flex flex-col -mt-24 bg-[url('/imgs/hero-cover.jpg')] bg-center bg-cover max-h-[570px] sm:max-h-[680px] md:max-h-[750px] shadow-inner"
+  containerClassName="flex-1"
+>
+  <div class="flex flex-col h-full justify-center items-center">
+    <HeroSlider client:only />
+  </div>
   <div class="hero-cover"></div>
-</section>
+</Section>

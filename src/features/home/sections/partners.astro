@@ -1,52 +1,32 @@
 ---
-const PARTNERS = [
-  {
-    url: "#",
-    src: "/imgs/partner-1.png",
-    alt: "Partner 1",
-  },
-  {
-    url: "#",
-    src: "/imgs/partner-2.png",
-    alt: "Partner 2",
-  },
-  {
-    url: "#",
-    src: "/imgs/partner-3.png",
-    alt: "Partner 3",
-  },
-  {
-    url: "#",
-    src: "/imgs/partner-4.png",
-    alt: "Partner 4",
-  },
-  {
-    url: "#",
-    src: "/imgs/partner-5.png",
-    alt: "Partner 5",
-  },
-];
+import Section from "../../../commons/components/section.astro";
+import { PARTNERS } from "../../../commons/constants";
 ---
 
-<section class="relative py-20">
-  <div class="container flex flex-row gap-10">
-    <h2 class="text-2xl font-bold flex-shrink-0" data-aos="fade-up">
-      Đối tác <br /> Clover CSC
-    </h2>
-    <div class="flex flex-row gap-3">
-      {
-        PARTNERS.map((partner, index) => (
-          <div
-            class="basis-1/4 relative transition hover:-translate-y-2 duration-300"
-            data-aos="fade-down"
-            data-aos-delay={index * 200}
+<Section
+  class="!py-20 bg-gray-50 md:bg-transparent"
+  containerClassName="flex flex-col md:flex-row gap-10"
+>
+  <h2 class="text-2xl font-bold flex-shrink-0" data-aos="fade-up">
+    Đối tác <br /> Clover CSC
+  </h2>
+  <div class="flex flex-row flex-wrap gap-3 md:flex-nowrap">
+    {
+      PARTNERS.map((partner, index) => (
+        <div
+          class="basis-auto shadow-lg md:shadow-none lg:basis-1/4 relative transition hover:-translate-y-2 duration-300 flex-1 bg-white md:bg-transparent rounded-md md:rounded-none"
+          data-aos="fade-down"
+          data-aos-delay={index * 200}
+        >
+          <a
+            href={partner.url}
+            class="block text-center p-3 md:p-0"
+            target="_blank"
           >
-            <a href={partner.url} target="_blank">
-              <img src={partner.src} alt={partner.alt} />
-            </a>
-          </div>
-        ))
-      }
-    </div>
+            <img src={partner.src} alt={partner.alt} class="inline-block" />
+          </a>
+        </div>
+      ))
+    }
   </div>
-</section>
+</Section>
